@@ -1,2 +1,8 @@
 per sviluppo locale:
     docker-compose -f docker-compose-infrastructure.yml up -d
+
+per sviluppo test/server con porte accessibili:
+    docker-compose -f docker-compose-local.yml -f docker-compose-test -f docker-compose-infrastructure.yml up -d 
+   
+    per sviluppo test/server con porte non accessibili:
+	docker-compose -f docker-compose-infrastructure.yml -f docker-compose-test.yml up -d
